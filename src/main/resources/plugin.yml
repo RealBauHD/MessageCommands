@@ -1,0 +1,7 @@
+name: MessageCommands
+author: BauHD
+version: 3.0
+main: de.bauhd.messagecommands.bootstrap.spigot.SpigotBootstrap
+description: Plugin that creates commands to send messages.
+website: https://www.spigotmc.org/resources/61780
+api-version: 1.13
