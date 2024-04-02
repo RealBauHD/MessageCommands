@@ -17,7 +17,7 @@ import net.kyori.adventure.text.Component;
     id = "messagecommands",
     name = "MessageCommands",
     authors = {"BauHD"},
-    version = "3.0",
+    version = "3.1.0",
     description = "Plugin that creates commands to send messages.",
     url = "https://www.spigotmc.org/resources/61780"
 )
