@@ -1,5 +1,0 @@
-name: MessageCommands
-author: BauHD
-version: "3.1.0"
-main: dev.bauhd.messagecommands.bootstrap.bungee.BungeeBootstrap
-description: Plugin that creates commands to send messages.

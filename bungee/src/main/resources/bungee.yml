@@ -1,0 +1,5 @@
+name: MessageCommands
+author: BauHD
+version: "3.1.0"
+main: dev.bauhd.messagecommands.bungee.BungeeMessageCommands
+description: A plugin to create custom message commands.

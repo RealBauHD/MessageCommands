@@ -1,0 +1,7 @@
+name: MessageCommands
+author: BauHD
+version: '3.1.0'
+main: dev.bauhd.messagecommands.bukkit.BukkitMessageCommands
+description: A plugin to create custom message commands.
+website: https://modrinth.com/project/messagecommands
+api-version: 1.13

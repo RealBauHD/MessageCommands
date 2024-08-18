@@ -1,0 +1,7 @@
+name: MessageCommands
+author: BauHD
+version: '3.1.0'
+main: dev.bauhd.messagecommands.paper.PaperMessageCommands
+description: Plugin that creates commands to send messages.
+website: https://modrinth.com/project/messagecommands
+api-version: 1.19
