@@ -1,6 +1,7 @@
 package dev.bauhd.messagecommands.paper;
 
 import dev.bauhd.messagecommands.common.Configuration;
+import dev.bauhd.messagecommands.common.Constants;
 import dev.bauhd.messagecommands.common.MessageCommand;
 import java.util.Arrays;
 import net.kyori.adventure.text.minimessage.MiniMessage;
@@ -15,17 +16,16 @@ public final class PaperMessageCommands extends JavaPlugin {
   public void onEnable() {
     final var configuration = Configuration.load(this.getDataFolder().toPath());
     final var commandMap = this.getServer().getCommandMap();
-    final var label = "messagecommands";
     for (final var command : configuration.commands()) {
       if (command.enabled()) {
-        commandMap.register(label, this.toBukkitCommand(command));
+        commandMap.register(Constants.LABEL, this.toBukkitCommand(command));
       }
     }
   }
 
   private @NotNull Command toBukkitCommand(final MessageCommand messageCommand) {
     final var command = new Command(messageCommand.name(),
-        "A custom command from the MessageCommands plugin.",
+        Constants.DESCRIPTION,
         "/" + messageCommand.name(),
         Arrays.asList(messageCommand.aliases())) {
       @Override

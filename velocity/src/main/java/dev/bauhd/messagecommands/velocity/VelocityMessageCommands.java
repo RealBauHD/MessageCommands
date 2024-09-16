@@ -41,8 +41,11 @@ public final class VelocityMessageCommands {
     final var commandManager = this.proxyServer.getCommandManager();
     for (final var command : configuration.commands()) {
       if (command.enabled()) {
-        commandManager.register(command.name(), this.toBrigadierCommand(command),
-            command.aliases());
+        commandManager.register(commandManager.metaBuilder(command.name())
+                .plugin(this)
+                .aliases(command.aliases())
+                .build(),
+            this.toBrigadierCommand(command));
       }
     }
   }

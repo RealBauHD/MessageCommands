@@ -1,6 +1,7 @@
 package dev.bauhd.messagecommands.bukkit;
 
 import dev.bauhd.messagecommands.common.Configuration;
+import dev.bauhd.messagecommands.common.Constants;
 import dev.bauhd.messagecommands.common.MessageCommand;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
@@ -27,17 +28,16 @@ public final class BukkitMessageCommands extends JavaPlugin {
     } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
       throw new RuntimeException(e);
     }
-    final var label = "messagecommands";
     for (final var command : configuration.commands()) {
       if (command.enabled()) {
-        commandMap.register(label, this.toBukkitCommand(command));
+        commandMap.register(Constants.LABEL, this.toBukkitCommand(command));
       }
     }
   }
 
   private Command toBukkitCommand(final MessageCommand messageCommand) {
     final var command = new Command(messageCommand.name(),
-        "A custom command from the MessageCommands plugin.",
+        Constants.DESCRIPTION,
         "/" + messageCommand.name(),
         Arrays.asList(messageCommand.aliases())) {
       @Override
