@@ -1,5 +1,5 @@
 [plugins]
-shadow = { id = "com.github.johnrengelman.shadow", version = "8.1.1" }
+shadow = { id = "io.github.goooler.shadow", version = "8.1.8" }
 
 [libraries]
 adventure-platform-bukkit = "net.kyori:adventure-platform-bukkit:4.3.4"

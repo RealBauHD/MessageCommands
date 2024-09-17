@@ -50,7 +50,7 @@ public final class Configuration {
       }
     }
     final Configuration configuration = new Configuration();
-    try (final BufferedWriter writer = Files.newBufferedWriter(path)) {
+    try (final BufferedWriter writer = Files.newBufferedWriter(configPath)) {
       gson.toJson(configuration, writer);
     } catch (IOException e) {
       throw new RuntimeException(e);

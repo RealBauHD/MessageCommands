@@ -9,4 +9,8 @@ allprojects {
     repositories {
         mavenCentral()
     }
+
+    tasks.withType<JavaCompile> {
+        options.encoding = Charsets.UTF_8.name()
+    }
 }
