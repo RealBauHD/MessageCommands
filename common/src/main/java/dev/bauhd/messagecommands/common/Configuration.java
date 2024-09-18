@@ -33,7 +33,7 @@ public final class Configuration {
 
   public static Configuration load(final Path path) {
     final Path configPath = path.resolve("config.json");
-    final Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    final Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
     if (Files.exists(path)) {
       if (Files.exists(configPath)) {
         try (final BufferedReader reader = Files.newBufferedReader(configPath)) {
