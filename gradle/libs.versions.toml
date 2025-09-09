@@ -1,9 +1,8 @@
 [plugins]
-shadow = { id = "io.github.goooler.shadow", version = "8.1.8" }
+shadow = { id = "com.gradleup.shadow", version = "9.1.0" }
 
 [libraries]
-adventure-platform-bukkit = "net.kyori:adventure-platform-bukkit:4.3.4"
-adventure-platform-bungeecord = "net.kyori:adventure-platform-bungeecord:4.3.4"
-minimessage = "net.kyori:adventure-text-minimessage:4.17.0"
-miniplaceholders = "io.github.miniplaceholders:miniplaceholders-api:2.2.3"
+adventure-platform-bukkit = "net.kyori:adventure-platform-bukkit:4.4.1"
+adventure-platform-bungeecord = "net.kyori:adventure-platform-bungeecord:4.4.1"
+minimessage = "net.kyori:adventure-text-minimessage:4.24.0"
 gson = "com.google.code.gson:gson:2.11.0"

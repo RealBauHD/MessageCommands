@@ -3,6 +3,7 @@ package dev.bauhd.messagecommands.bukkit;
 import dev.bauhd.messagecommands.common.Configuration;
 import dev.bauhd.messagecommands.common.Constants;
 import dev.bauhd.messagecommands.common.MessageCommand;
+import dev.bauhd.messagecommands.common.MessageCommands;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import net.kyori.adventure.platform.bukkit.BukkitAudiences;
@@ -11,8 +12,9 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandMap;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.jetbrains.annotations.NotNull;
 
-public final class BukkitMessageCommands extends JavaPlugin {
+public final class BukkitMessageCommands extends JavaPlugin implements MessageCommands {
 
   private BukkitAudiences audiences;
 
@@ -41,7 +43,7 @@ public final class BukkitMessageCommands extends JavaPlugin {
         "/" + messageCommand.name(),
         Arrays.asList(messageCommand.aliases())) {
       @Override
-      public boolean execute(CommandSender sender, String label, String[] arguments) {
+      public boolean execute(@NotNull CommandSender sender, @NotNull String label, String[] arguments) {
         BukkitMessageCommands.this.audiences.sender(sender)
             .sendMessage(MiniMessage.miniMessage().deserialize(messageCommand.message()));
         return true;
